@@ -5,14 +5,6 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.rabbiter.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
-/**
- * <p>
- *  服务类
- * </p>
- *
- * @author rabbiter
- * @since 2023-01-02
- */
 public interface UserService extends IService<User> {
     IPage pageC(IPage<User> page);
 

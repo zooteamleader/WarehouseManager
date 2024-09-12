@@ -2,11 +2,7 @@ package com.rabbiter.common;
 
 import java.util.HashMap;
 
-/*
- * 分页参数的封装类
- * @author rabbiter
- * @date 2023/1/2 19:53
- */
+
 public class QueryPageParam {
     //设置默认值
     private int pageSize = 20;

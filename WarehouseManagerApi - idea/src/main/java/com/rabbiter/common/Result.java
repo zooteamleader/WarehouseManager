@@ -1,10 +1,5 @@
 package com.rabbiter.common;
 
-/*
- * 返回前端统一数据的封装类
- * @author rabbiter
- * @date 2023/1/2 20:36
- */
 public class Result {
 
     private int code;  //编码 200/400

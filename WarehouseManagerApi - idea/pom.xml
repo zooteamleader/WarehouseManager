@@ -51,6 +51,11 @@
 			<artifactId>spring-boot-starter-swagger</artifactId>
 			<version>1.5.1.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.8.0</version>
+		</dependency>
 	</dependencies>
 
 	<repositories>

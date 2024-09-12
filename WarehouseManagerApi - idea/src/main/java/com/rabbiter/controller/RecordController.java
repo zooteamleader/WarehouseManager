@@ -36,12 +36,7 @@ public class RecordController {
     private RecordService recordService;
     @Autowired
     private GoodsService goodsService;
-    
-    /*
-     * 
-     * @author rabbiter
-     * @date 2023/1/6 20:58
-     */
+
     @PostMapping("/listPage")
     public Result listPage(@RequestBody QueryPageParam query){
         HashMap param = query.getParam();
@@ -77,11 +72,6 @@ public class RecordController {
         return Result.success(result.getRecords(),result.getTotal());
     }
 
-    /*
-     * 新增记录
-     * @author rabbiter
-     * @date 2023/1/6 21:21
-     */
     @PostMapping("/save")
     public Result save(@RequestBody Record record){
         Goods goods = goodsService.getById(record.getGoods());

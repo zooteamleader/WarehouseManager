@@ -28,41 +28,24 @@ public class GoodsController {
     @Autowired
     private GoodsService goodsService;
     
-    /*
-     * 新增物品
-     * @author rabbiter
-     * @date 2023/1/6 12:12
-     */
+
     @PostMapping("/save")
     public Result save(@RequestBody Goods goods){
         return goodsService.save(goods)?Result.success():Result.fail();
     }
 
-    /*
-     * 更新物品
-     * @author rabbiter
-     * @date 2023/1/6 13:22
-     */
+
     @PostMapping("/update")
     public Result update(@RequestBody Goods goods){
         return goodsService.updateById(goods)?Result.success():Result.fail();
     }
 
-    /*
-     * 删除物品
-     * @author rabbiter
-     * @date 2023/1/6 13:24
-     */
     @GetMapping("/del")
     public Result del(@RequestParam String id){
         return goodsService.removeById(id)?Result.success():Result.fail();
     }
 
-    /*
-     * 模糊查询：根据输入查询物品并以分页的形式展示
-     * @author rabbiter
-     * @date 2023/1/6 13:31
-     */
+
     @PostMapping("/listPage")
     public Result listPage(@RequestBody QueryPageParam query){
         HashMap param = query.getParam();

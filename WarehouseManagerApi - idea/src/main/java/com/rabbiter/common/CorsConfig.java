@@ -4,11 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/*
- * 解决跨域问题：重写WebMvcConfigurer的addCorsMappings方法（全局跨域配置）
- * @author rabbiter
- * @date 2023/1/3 1:30
- */
+
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
  

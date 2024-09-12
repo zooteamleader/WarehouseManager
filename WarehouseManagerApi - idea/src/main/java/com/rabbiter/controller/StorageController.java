@@ -15,66 +15,37 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * <p>
- *  前端控制器：仓库管理模块
- * </p>
- *
- * @author rabbiter
- * @since 2023-01-05
- */
+
 @RestController
 @RequestMapping("/storage")
 public class StorageController {
     @Autowired
     private StorageService storageService;
 
-    /*
-     * 新增仓库
-     * @author rabbiter
-     * @date 2023/1/5 19:36
-     */
     @PostMapping("/save")
     public Result save(@RequestBody Storage storage){
         return storageService.save(storage)?Result.success():Result.fail();
     }
     
-    /*
-     * 更新仓库
-     * @author rabbiter
-     * @date 2023/1/5 19:38
-     */
+
     @PostMapping("/update")
     public Result update(@RequestBody Storage storage){
         return storageService.updateById(storage)?Result.success():Result.fail();
     }
     
-    /*
-     * 删除仓库
-     * @author rabbiter
-     * @date 2023/1/5 19:40
-     */
+
     @GetMapping("/del")
     public Result del(@RequestParam String id){
         return storageService.removeById(id)?Result.success():Result.fail();
     }
 
-    /*
-     * 查询仓库列表
-     * @author rabbiter
-     * @date 2023/1/5 19:42
-     */
+
     @GetMapping("/list")
     public Result list(){
         List list = storageService.list();
         return Result.success(list);
     }
 
-    /*
-     * 模糊查询：根据输入查询仓库并以分页的形式展示
-     * @author rabbiter
-     * @date 2023/1/5 19:43
-     */
     @PostMapping("/listPage")
     public Result listPage(@RequestBody QueryPageParam query){
         HashMap param = query.getParam();

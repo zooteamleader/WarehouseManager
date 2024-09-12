@@ -9,14 +9,6 @@ import java.util.Objects;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-/**
- * <p>
- * 用户实体类
- * </p>
- *
- * @author rabbiter
- * @since 2023-01-02
- */
 @ApiModel(value="User对象", description="")
 public class User implements Serializable {
 

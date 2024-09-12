@@ -8,14 +8,7 @@ import java.util.Objects;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author rabbiter
- * @since 2023-01-05
- */
+
 @ApiModel(value="Storage对象", description="")
 public class Storage implements Serializable {
 
